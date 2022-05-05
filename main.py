@@ -8,10 +8,16 @@ Description:
 This is a Python program used for encrypting a string
 into any encryption algorithm you select.
 """
+
+# Used for encrypting the user's string.
 import encrypt
+# Used for accepting arguments to specify the string to encrypt, and encryption algorithm to use.
 import argparse
 
+# Main function for encrypting the user's string.
 def main():
+    
+    # Argument parser for accepting arguments.
     parser = argparse.ArgumentParser()
     parser.description = """Securly encrypt your strings with (almost) any encryption algorithm.
     """
@@ -22,17 +28,8 @@ def main():
     args = parser.parse_args()
     algorithm = str(args.algorithm)
     string = str(args.string)
-
-    if algorithm == "" or string == "":
-        if algorithm == "" or algorithm == None:
-            print("\nPlease enter an encryption algorithm\n")
-
-        elif string == "" or string == None:
-            print("\nPlease enter a string to encrypt\n")
-
-    else:
-        pass
-
+    
+    # Function to write the encrypted string, unencrypted string, and encryption algorithm used into a .txt file
     def write_to_file():
         file_stream = open("Encrypted.txt", "w")
 
@@ -99,7 +96,7 @@ Hashed value: {hashed_string}
         else:
             pass
 
-
+    # Function to encrypt the user's string, and display the unencrypted string and the encrypted string.
     def encrypt_string():
 
         if algorithm.upper() == "MD5":
@@ -129,19 +126,21 @@ Hashed value: {hashed_string}
         else:
             pass
 
-
+    # Used for showing which encryption algorithms can (currently) be used for encyrpting strings.
     encryption_algorithms = ["MD5", "SHA1", "SHA224", "SHA256","SHA384", "SHA512"]
     encryptor = encrypt.user_string()
     if args.list_algorithms:
         for item in encryption_algorithms:
             print(item)
         print()
-
+    # If the user wants the encrypted, and uncrypted string (recommended) writen into a .txt file. Then with the argument provided, it will encypt the stirng,
+    #and have the encrypted string, unencrypted string, and the algorithm used written to the file. And it will show the user on their terminal the encrypted and unecrypted string.
     elif args.write_to_file:
         encrypt_string()
         write_to_file()
 
-
+    # If the user does not want the encrypted, unencrypted string, and algorithm used into a .txt file. Then after the string had been encrypted, it will display the
+    # unencrypted, and encrypted string to the user.
     elif not args.write_to_file:
         encrypt_string()
         
@@ -152,5 +151,5 @@ try:
     main()
 
 except Exception as e:
-    raise e
+    print(f"\nError: {e}\n")
 
