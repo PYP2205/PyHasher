@@ -1,0 +1,2 @@
+# PyEncryptor
+A Python program for encrypting a user string with commonly used encryption algorithms (MD5, SHA-1, SHA-256, etc.). To know what algorithms you can use for encrypting strings, then you can list all encryption algorithms you can use for encrypting the string. Then when you've decied which algorithm to use, then with 2 paramters and arguments you will encrypt a string with the algorithm provided
