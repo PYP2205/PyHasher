@@ -1,7 +1,7 @@
 """
 PyEncryptor
 
-Programmed by:
+Programmed by: Paramon Yevstigneyev
 Programmed in: Python 3.8.10 (64-Bit)
 
 Description:
