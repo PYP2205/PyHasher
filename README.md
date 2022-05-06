@@ -8,7 +8,9 @@ From the latest release page, download the executable for your system. Currently
 
 # Usage
 Please note that if you provide these arguments and paramyters in any random order, then it will not cause any exception(s) to be raised.
-* "--string" is used for storing the string that will be encrypyed.
-* "--algorithm" is used for specifying which encryption algorithm to use, for encrypting your string.
-* "--list-algorithms" is used for listing encryption algorithms that this program can (currently) encrypt strings with.
-* "--write-to-file" is used for writing the unencrypted string, encrypted string, and the encryption algorithm used to encrypt the string.
+* "--string" is used for storing the string that will be encrypyed [Required].
+* "--algorithm" is used for specifying which encryption algorithm to use, for encrypting your string [Required for specifying an encryption algorithm].
+* "--list-algorithms" is used for listing encryption algorithms that this program can (currently) encrypt strings with [Optional].
+* "--use-all-algorithms" is used for encyrpting a string with all (currently supported) encryption algorithms [Optional, but required if you're not specifying one single algorithm].
+* "--write-to-file" is used for writing the unencrypted string, encrypted string, and the encryption algorithm used to encrypt the string [Optional, but recommended].
+* "--file" is used to specify the name of the file, that would store the strings and hashes you input [Required if you wish to write the strings and hashes to a file].
