@@ -66,7 +66,7 @@ class user_string:
         
         self.sha384_hasher = self.hashlib.sha384()
         self.sha384_hasher.update(string.encode("utf-8"))
-        self.hashed_string = self.sha238_hasher.hexdigest()
+        self.hashed_string = self.sha384_hasher.hexdigest()
         return self.hashed_string
 
     def sha512(self, string):
@@ -74,7 +74,7 @@ class user_string:
         Encrypts a string using the SHA-512 Encryption Algorithm.
         """
         
-        self.sha512_hasher = self.hashlib.sha212()
+        self.sha512_hasher = self.hashlib.sha512()
         self.sha512_hasher.update(string.encode("utf-8"))
-        self.hashed_string = self.sha224_hasher.hexdigest()
+        self.hashed_string = self.sha512_hasher.hexdigest()
         return self.hashed_string
