@@ -1,5 +1,5 @@
 """
-PyHasher
+PyEncryptor
 
 Programmed by: Paramon Yevstigneyev
 Programmed in: Python 3.8.10 (64-Bit)
@@ -331,7 +331,7 @@ SHA-512 value: {sha512_hash}
     encryptor = encrypt.user_string()
     if args.list_algorithms:
         for algorithm in encryption_algorithms:
-            print(algoritm)
+            print(algorithm)
         print()
 
     elif args.use_all_algorithms:
