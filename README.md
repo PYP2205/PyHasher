@@ -12,5 +12,5 @@ Please note that if you provide these arguments and paramyters in any random ord
 * "--algorithm" is used for specifying which encryption algorithm to use, for encrypting your string [Required for specifying an encryption algorithm].
 * "--list-algorithms" is used for listing encryption algorithms that this program can (currently) encrypt strings with [Optional].
 * "--use-all-algorithms" is used for encyrpting a string with all (currently supported) encryption algorithms [Optional, but required if you're not specifying one single algorithm].
-* "--write-to-file" is used for writing the unencrypted string, encrypted string, and the encryption algorithm used to encrypt the string [Optional, but recommended].
-* "--file" is used to specify the name of the file, that would store the strings and hashes you input [Required if you wish to write the strings and hashes to a file].
+* "--write-to-file" is used for writing the unencrypted string, encrypted string, and the encryption algorithm used to encrypt the string [Optional, but recommended. If specified enter a name of a file to write the string and hashes to].
+* "--file" is used to specify the name of the file, that would store the strings and hashes you input [Deprecated].
